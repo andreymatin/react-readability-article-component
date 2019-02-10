@@ -8,6 +8,7 @@ React component Article with readability features
 - typography settings
 - just CSS but with CSS variables and calculations
 - prefers-color-scheme support
+- REM full support
 
 ## Basic Variables
 
