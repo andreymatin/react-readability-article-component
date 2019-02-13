@@ -45,8 +45,8 @@ Container Width = CPL * Line Height
 
 ## Preferences
 
-http://microformats.org/wiki/h-entry
-https://schema.org/Article
-https://www.readability.com/index.html
-https://www.flaticon.com/packs/essential-set-2
-https://github.com/sindresorhus/screenfull.js
+- http://microformats.org/wiki/h-entry
+- https://schema.org/Article
+- https://www.readability.com/index.html
+- https://www.flaticon.com/packs/essential-set-2
+- https://github.com/sindresorhus/screenfull.js
