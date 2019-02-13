@@ -20,10 +20,10 @@ React component Article and Readability with wide web-typography features
 - Article
 - Readability
 
-### Article Component
+#### Article Component
 HTML template SEO optimized by shema and microformats
 
-### Readability Component
+#### Readability Component
 Readability Configuration Parameters by Popup
 
 
@@ -39,14 +39,8 @@ Readability Configuration Parameters by Popup
 ## Web Typography Formulas
 
 Line Height = Font Size * Golden Ratio
+
 Container Width = CPL * Line Height
-
-
-## CSS Classes Scope
-
-| Browser Readers (+ Firefox) | entry-content, entry-header, entry-title, entry-data |
-| Microformats "h-entry"      | e-content                                            |
-| Shema                       | name, description, articleBody                       |
 
 
 ## Preferences
