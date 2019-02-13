@@ -20,15 +20,6 @@ React component Article and Readability with wide web-typography features
 - Article
 - Readability
 
-## Additional React Libraries
-
-| Pug support       | babel-plugin-transform-react-pug |
-| Styled Components | styled-components                |
-
-https://github.com/pugjs/babel-plugin-transform-react-pug
-https://www.styled-components.com/
-
-
 ### Article Component
 HTML template SEO optimized by shema and microformats
 
@@ -65,17 +56,3 @@ https://schema.org/Article
 https://www.readability.com/index.html
 https://www.flaticon.com/packs/essential-set-2
 https://github.com/sindresorhus/screenfull.js
-
-
-## Todo
-
-- print view and print button
-- no images
-- audio commands
-- pdf support (https://medium.com/@shivekkhurana/how-to-create-pdfs-from-react-components-client-side-solution-7f506d9dfa6d)
-
-## Tags
-
-css-in-js
-styled-components
-css
