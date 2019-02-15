@@ -7,10 +7,10 @@ import { Article } from './styles';
 export default class ArticleBox extends Component {
   render() {
     return (
-      <Article className="article entry-content ligature">
+      <Article className="article entry-content">
         <header className="entry-header" itemScope itemType="http://schema.org/Article">
           <h1 className="entry-title" itemProp="name">Header</h1>
-          <p className="entry-summary" itemProp="description"><strong>Summary subtitle</strong></p>
+          <h3 className="entry-summary" itemProp="description">Summary subtitle</h3>
 
           <div className="entry-meta">
             <p itemProp="author" className="p-author"> John Doe </p>
@@ -19,10 +19,21 @@ export default class ArticleBox extends Component {
 
         </header>
         <div className="entry-data e-content" itemProp="articleBody">
+
+          <h3>Basic Typography calculations + ligature</h3>
           <p>Igature Test: fi fl ff fb ffb fh ffh ffi fj ffj fk ffk fl st ct</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam iure maxime assumenda, et maiores, fugiat necessitatibus asperiores aliquid eligendi, eos similique sequi modi mollitia. Quo maxime sed magni quisquam.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam iure maxime assumenda, et maiores, fugiat necessitatibus asperiores aliquid eligendi, eos similique sequi modi mollitia. Quo maxime sed magni quisquam.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam iure maxime assumenda, et maiores, fugiat necessitatibus asperiores aliquid eligendi, eos similique sequi modi mollitia. Quo maxime sed magni quisquam.</p>
+
+          <h3>Advanced Typography Features with Font Metrics</h3>
+          <p class="typo-features ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam iure maxime assumenda, et maiores, fugiat necessitatibus asperiores aliquid eligendi, eos similique sequi modi mollitia. Quo maxime sed magni quisquam.</p>
+
+          <h3>List Example</h3>
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </ul>
         </div>
       </Article>
     );

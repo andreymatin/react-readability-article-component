@@ -51,6 +51,11 @@ export const GlobalStyle = createGlobalStyle`
 /**
  * Reset
  */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -81,6 +86,56 @@ li {
   letter-spacing: var(--letter-spacing);
   word-spacing: var(--word-spacing);
 }
+
+.ligature p {
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -moz-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  font-variant-ligatures: common-ligatures;
+}
+
+.typo-features {
+  /* font metrics */
+  --font: Calibri;
+  --fm-emSquare: 1;
+  --fm-capitalHeight: 0.68;
+  --fm-descender: 0.54;
+  --fm-ascender: 1.1;
+  --fm-linegap: 0;
+
+  /* compute needed values */
+  --lineheightNormal: (var(--fm-ascender) + var(--fm-descender) + var(--fm-linegap));
+  --distanceBottom: (var(--fm-descender));
+  --distanceTop: (var(--fm-ascender) - var(--fm-capitalHeight));
+  --contentArea: (var(--lineheightNormal) * var(--computedFontSize));
+  --valign: ((var(--distanceBottom) - var(--distanceTop)) * var(--computedFontSize));
+  --computedFontSize: (var(--capital-height) / var(--fm-capitalHeight));
+  --computedLineheight: ((var(--line-height) * var(--capital-height)) - var(--valign));
+
+  /* desired capital height and line-height */
+  --capital-height: ${entryFontSize}rem;
+  --line-height: var(--entry-line-height);
+
+  /* set font family */
+  font-family: var(--font);
+
+  /* set capital height to equal font-size */
+  font-size: calc(var(--computedFontSize) * 1rem / 10);
+
+  /* set computed line-height */
+  line-height: calc(var(--computedLineheight) * 1rem / 10);
+
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 
 /**
  * Grid

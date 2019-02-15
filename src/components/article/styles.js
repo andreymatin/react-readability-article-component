@@ -14,6 +14,8 @@ export const Article = styled.article`
   line-height: var(--header-font-size);
   letter-spacing: var(--letter-spacing);
   word-spacing: var(--word-spacing);
+  text-transform: uppercase;
+
   padding: 5rem 0 0;
   margin: 0;
 }
@@ -21,17 +23,6 @@ export const Article = styled.article`
 .entry-summary {
   padding: 0;
   margin: 0;
-}
-
-.ligature p {
-  text-rendering: optimizeLegibility;
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -moz-font-feature-settings: "liga", "dlig";
-  -ms-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  -webkit-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig";
-  font-variant-ligatures: common-ligatures;
 }
 
 .entry-data p+.entry-data p {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ReadabilityBox = styled.section`
+export const ReadabilityBox = styled.aside`
   position: fixed;
   top: 0;
   left: 0;
