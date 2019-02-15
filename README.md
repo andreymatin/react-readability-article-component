@@ -19,6 +19,7 @@ with flex configuration and wide range of the web-typography features
 - crossbrowser full screen support
 - enlarged text and layout by REM
 - night theme
+- speech API
 
 
 
