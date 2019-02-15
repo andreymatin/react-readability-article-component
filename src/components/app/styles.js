@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
   /* Font */
   --basic-font-size: 62.5%;
 
-  --header-font-family: Helvetica, sans-serif;
+  --header-font-family: Impact, Helvetica, sans-serif;
   --header-font-size: 5rem;
   /* --header-line-height: calc(var(--header-font-size) * var(--golden-ratio)); */
 
@@ -49,8 +49,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 /**
-* Reset
-*/
+ * Reset
+ */
 html,
 body {
   margin: 0;
@@ -58,8 +58,8 @@ body {
 }
 
 /**
-* Typography
-*/
+ * Typography
+ */
 html {
   font-size: var(--basic-font-size);
 
@@ -83,8 +83,8 @@ li {
 }
 
 /**
-* Grid
-*/
+ * Grid
+ */
 .container {
   display: flex;
   margin: 0 auto;
@@ -107,8 +107,8 @@ li {
 }
 
 /**
-* Browser Dark Scheme
-*/
+ * Browser Dark Scheme
+ */
 @media (prefers-color-scheme: dark) {
   .theme {
     background: #444;
@@ -117,11 +117,30 @@ li {
 }
 
 /**
-* Mobile Adaptation
-*/
+ * Mobile Adaptation
+ */
 @media only screen and (max-width: ${containerWidth}rem) {
   body {
     padding: var(--screen-padding);
+  }
+
+  /* Readability config*/
+  .config {
+    left: auto;
+    right: 0;
+
+    .btn-fullscreen {
+    display: none;
+    }
+
+    .btn-config-toggle {
+      width: 100%;
+      text-align: right;
+
+      svg {
+        width: 25px;
+      }
+    }
   }
 }
 `;

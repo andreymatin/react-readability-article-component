@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const ArticleBox = styled.section`
+export const Article = styled.article`
 /**
-* Article
-*/
+ * Article
+ */
 .entry-header {
   padding: 0 0 0.5rem;
 }

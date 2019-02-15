@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Components
-import Article from '../article';
+import ArticleBox from '../article';
 import Readability from '../readability';
 
 // Global CSS
@@ -13,7 +13,7 @@ export default class App extends Component {
       <main role="main">
         <GlobalStyle />
         <Readability />
-        <Article />
+        <ArticleBox />
       </main>
     );
   }

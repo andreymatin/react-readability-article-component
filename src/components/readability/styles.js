@@ -5,8 +5,7 @@ export const ReadabilityBox = styled.section`
   top: 0;
   left: 0;
   padding: 20px;
-  background: rgba(255,255,255,.5);
-
+  background: #fff;
   border: 1px dashed #000;
 
   ul {
@@ -34,12 +33,12 @@ export const ReadabilityBox = styled.section`
   }
 
   .btn-config-toggle {
-    background: transparent url('../images/config.png') no-repeat;
     width: 32px;
     height: 32px;
     border: 0;
     padding: 0;
     cursor: pointer;
+    background: #fff;
   }
 
   .btn-config {
