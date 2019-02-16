@@ -9,10 +9,27 @@ import { ReadabilityBox } from './styles';
 // Image
 import {ReactComponent as IconConfig} from './icon-config.svg';
 
+// Service
+import FlatService from '../../services/flat-service';
+
 /**
  * Readability Component
  */
 export default class Readability extends Component {
+
+  /**
+   * Get Data
+   */
+  flatService = new FlatService();
+
+  /**
+   * Constructor
+   */
+  constructor() {
+    super();
+
+    this.state = {speechContent: this.getSpeechСontent()};
+  }
 
   /**
    * State
@@ -22,8 +39,13 @@ export default class Readability extends Component {
     isFullScreen: false,
     isEnlargedText: false,
     isNightTheme: false,
-    isSpeech: false
+    isSpeech: false,
+    speechContent: null
   }
+
+  getSpeechСontent = () => {
+    return this.flatService.getDumpSpeech();
+  };
 
   /**
    * Toggle Config Panel
@@ -76,25 +98,11 @@ export default class Readability extends Component {
    */
   onSpeech = () => {
     this.setState({
-      isSpeech: !this.state.isSpeech
+      isSpeech: !this.state.isSpeech,
     });
 
-    const text = `
-      Title: Header.
-      Subtitle: Summary subtitle.
-      Author: John Doe.
-      Date: 12, February, 2019
-      Article Content:
-      Chapter 1: Basic Typography calculations + ligature.
-      Igature Test: fi fl ff fb ffb fh ffh ffi fj ffj fk ffk fl st ct.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. etc.
-      Chapter 2: Advanced Typography Features with Font Metrics
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. etc.
-      Subtitle: List Example
-      List Item 1: Coffee
-      List Item 2: Tea
-      List Item 3: Milk
-    `;
+    // Aticle content optimization
+    const text = this.state.speechContent;
     const utterance = new SpeechSynthesisUtterance(text);
 
     utterance.pitch = 1;
@@ -105,6 +113,9 @@ export default class Readability extends Component {
     }
   }
 
+  /**
+   * Render component
+   */
   render() {
     const {isHidden, isFullScreen, isEnlargedText, isNightTheme, isSpeech} = this.state;
 

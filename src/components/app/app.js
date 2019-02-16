@@ -4,17 +4,24 @@ import React, { Component } from 'react';
 import ArticleBox from '../article';
 import Readability from '../readability';
 
+
 // Global CSS
 import { GlobalStyle } from './styles';
 
 export default class App extends Component {
+  state = {
+    speech: null,
+    content: null,
+    loading: true
+  }
+
   render() {
     return (
-      <main>
+      <React.Fragment>
         <GlobalStyle />
         <Readability />
         <ArticleBox />
-      </main>
+      </React.Fragment>
     );
   }
 }

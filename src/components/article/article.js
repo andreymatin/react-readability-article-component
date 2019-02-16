@@ -26,7 +26,7 @@ export default class ArticleBox extends Component {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam iure maxime assumenda, et maiores, fugiat necessitatibus asperiores aliquid eligendi, eos similique sequi modi mollitia. Quo maxime sed magni quisquam.</p>
 
           <h3>Advanced Typography Features with Font Metrics</h3>
-          <p class="typo-features ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam iure maxime assumenda, et maiores, fugiat necessitatibus asperiores aliquid eligendi, eos similique sequi modi mollitia. Quo maxime sed magni quisquam.</p>
+          <p className="typo-features ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit numquam iure maxime assumenda, et maiores, fugiat necessitatibus asperiores aliquid eligendi, eos similique sequi modi mollitia. Quo maxime sed magni quisquam.</p>
 
           <h3>List Example</h3>
           <ul>

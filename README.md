@@ -1,5 +1,8 @@
 # React readability and article components
 
+## Header with custom ID {: #custom_id }
+
+
 React components Article and Readability
 with flex configuration and wide range of the web-typography features
 
@@ -163,21 +166,26 @@ Configuration Parameters for content, layout and browser
 
 ## Todo
 
-- readability: color modes (Light | Dark | Sepia)
-- readability: line-height configuration
-- readability: content-width configuration
-- readability: font-size configuration
-- readability: print view and print button
-- readability: San-serif / Serif Fonts
-- readability: no images
-- readability: audio commands
-- readability: pdf support
-- article: CSS3 ligature on / off
-- readability: Narrate button
-- article: html5 video support ( + youtube )
-- SEO: server-side content generation (SSR)
-- app: themes and fonts
-- app: Pug template engine support
-- app: AMP support
-- app: Flat / DB support
-- app: react-app-rewired
+- [ ] readability: color modes (Light | Dark | Sepia)
+- [ ] readability: line-height configuration
+- [ ] readability: content-width configuration
+- [ ] readability: font-size configuration
+- [ ] readability: print view and print button
+- [ ] readability: San-serif / Serif Fonts
+- [ ] readability: no images
+- [ ] readability: audio commands
+- [ ] readability: pdf support
+- [ ] article: CSS3 ligature on / off
+- [ ] readability: Narrate button
+- [ ] article: html5 video support ( + youtube )
+- [ ] SEO: server-side content generation (SSR)
+- [ ] app: themes and fonts
+- [ ] app: Pug template engine support
+- [ ] app: AMP support
+- [ ] app: Flat / DB support
+- [ ] app: react-app-rewired
+- [ ] reader: export optimized content
+- [ ] article: quotes
+- [ ] article: slider
+- [ ] article: asides
+- [ ] article: footer structure (comments, pager navigation)
