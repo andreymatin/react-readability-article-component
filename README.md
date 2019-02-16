@@ -1,8 +1,5 @@
 # React readability and article components
 
-## Header with custom ID
-
-
 React components Article and Readability
 with flex configuration and wide range of the web-typography features
 
