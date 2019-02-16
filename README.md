@@ -1,6 +1,6 @@
 # React readability and article components
 
-## Header with custom ID {: #custom_id }
+## Header with custom ID
 
 
 React components Article and Readability
