@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import ErrorHandler from '../error-handler';
+
 // Full Screen Library (https://github.com/sindresorhus/screenfull.js)
 import screenfull from 'screenfull';
 
@@ -29,7 +31,7 @@ export default class Readability extends Component {
     super();
 
     // Get speech content
-    this.state = {speechContent: this.getSpeechСontent()};
+    this.getSpeechСontent();
   }
 
   /**
@@ -67,11 +69,33 @@ export default class Readability extends Component {
     isNightTheme: false,
     isSpeech: false,
     isSpeechAPI: false,
-    speechContent: null
+    speechContent: null,
+    loading: true
   }
 
+  onSpeechContentLoaded = (text) => {
+    this.setState({
+      speechContent: text,
+      loading: false,
+      error: false
+    });
+  };
+
+  onError = (err) => {
+    this.setState({
+      error: true,
+      loading: false
+    });
+  };
+
+  /**
+   * Get Speech Content
+   */
   getSpeechСontent = () => {
-    return this.flatService.getDumpSpeech();
+    this.flatService
+      .getDumpSpeech()
+      .then(this.onSpeechContentLoaded)
+      .catch(this.onError);
   };
 
   /**
@@ -144,19 +168,22 @@ export default class Readability extends Component {
    * Render component
    */
   render() {
-    const {isHidden, isFullScreen, isEnlargedText, isNightTheme, isSpeech, isSpeechAPI} = this.state;
+    const {error, isHidden, isFullScreen, isEnlargedText, isNightTheme, isSpeech, isSpeechAPI} = this.state;
+
+    // Erorr
+    const errorMessage = error ? <ErrorHandler/> : null;
 
     // Status Buttons
-    const statusHidden = !isHidden ? '' : 'active'
+    const statusHidden = isHidden ? '' : 'active'
     const statusFullScreen = isFullScreen ? 'active' : '';
     const statusEnlargedText = isEnlargedText ? 'active' : '';
     const statusNightTheme = isNightTheme ? 'active' : '';
     const statusSpeech = isSpeech ? 'active' : '';
 
-
     return (
       // Readability
       <ReadabilityBox className="config">
+        {errorMessage}
         <button className="btn-config-toggle" onClick={this.toggleConfigPanel}><IconConfig /></button>
         <div className={`config-panel ${statusHidden}`}>
           <ul>

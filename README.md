@@ -1,5 +1,8 @@
 # React readability and article components
 
+## Header with custom ID {: #custom_id }
+
+
 React components Article and Readability
 with flex configuration and wide range of the web-typography features
 
@@ -7,7 +10,9 @@ with flex configuration and wide range of the web-typography features
 
 - Browsers: Firefox read view (@todo  SSR support)
 - Devices: iPhone Reader View support
+
 ![iPhone Reader View](https://i.imgur.com/0gWdTLql.png)
+
 - CSS3: Flexible typography settings
 - CSS3: prefers-color-scheme support
 - CSS3: ligature support
@@ -15,19 +20,20 @@ with flex configuration and wide range of the web-typography features
 - SEO: microformats support
 - Accessibility roles
 
-## Readability Configuration Panel Features
+## Readability Features
 
 - crossbrowser full screen support
 - enlarged text and layout by REM
 - night theme
 - speech API
-
+- fetch API
 
 
 ## Components
 
 - Article
 - Readability
+- ErrorHandler
 
 
 ## Additional React Libraries

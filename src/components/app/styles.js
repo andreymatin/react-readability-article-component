@@ -142,6 +142,7 @@ li {
  */
 .container {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: var(--container-width);
 }
@@ -197,5 +198,23 @@ li {
       }
     }
   }
+}
+
+
+/**
+ * Smartphone
+ */
+@media only screen and (max-width: 640px) {
+  /* Readability config*/
+  .config {
+    position: relative;
+    width: 100%;
+  }
+
+  .btn-config  {
+    width: 100%;
+    text-align: left;
+  }
+
 }
 `;
