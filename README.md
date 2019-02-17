@@ -7,7 +7,9 @@ with flex configuration and wide range of the web-typography features
 
 - Browsers: Firefox read view (@todo  SSR support)
 - Devices: iPhone Reader View support
+
 ![iPhone Reader View](https://i.imgur.com/0gWdTLql.png)
+
 - CSS3: Flexible typography settings
 - CSS3: prefers-color-scheme support
 - CSS3: ligature support
