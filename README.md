@@ -10,6 +10,7 @@ with flex configuration and wide range of the web-typography features
 
 - Browsers: Firefox read view (@todo  SSR support)
 - Devices: iPhone Reader View support
+![iPhone Reader View](https://i.imgur.com/0gWdTLql.png)
 - CSS3: Flexible typography settings
 - CSS3: prefers-color-scheme support
 - CSS3: ligature support
@@ -162,6 +163,7 @@ Configuration Parameters for content, layout and browser
 - https://github.com/sindresorhus/screenfull.js
 - https://opentype.js.org/font-inspector.html
 - http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+- http://westonthayer.com/writing/intro-to-font-metrics/
 
 
 ## Todo

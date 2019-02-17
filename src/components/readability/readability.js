@@ -28,8 +28,34 @@ export default class Readability extends Component {
   constructor() {
     super();
 
+    // Get speech content
     this.state = {speechContent: this.getSpeechСontent()};
   }
+
+  /**
+   * Mounted Status
+   */
+  componentDidMount() {
+    // Check Screenfull event
+    if (screenfull.enabled) {
+      screenfull.on('change', () => {
+        this.setState({
+          isFullScreen: screenfull.isFullscreen
+        });
+      });
+    }
+
+    // Check speechSynthesis API availability
+    if ('speechSynthesis' in window) {
+
+      // @todo .addEventListener('end', function(event) { });
+
+      this.setState({
+        isSpeechAPI: true
+      });
+    }
+  }
+
 
   /**
    * State
@@ -40,6 +66,7 @@ export default class Readability extends Component {
     isEnlargedText: false,
     isNightTheme: false,
     isSpeech: false,
+    isSpeechAPI: false,
     speechContent: null
   }
 
@@ -117,29 +144,15 @@ export default class Readability extends Component {
    * Render component
    */
   render() {
-    const {isHidden, isFullScreen, isEnlargedText, isNightTheme, isSpeech} = this.state;
+    const {isHidden, isFullScreen, isEnlargedText, isNightTheme, isSpeech, isSpeechAPI} = this.state;
 
     // Status Buttons
-    const statusHidden = isHidden ? '' : 'active'
+    const statusHidden = !isHidden ? '' : 'active'
     const statusFullScreen = isFullScreen ? 'active' : '';
     const statusEnlargedText = isEnlargedText ? 'active' : '';
     const statusNightTheme = isNightTheme ? 'active' : '';
     const statusSpeech = isSpeech ? 'active' : '';
 
-    // Check Screenfull event
-    if (screenfull.enabled) {
-      screenfull.on('change', () => {
-        this.setState({
-          isFullScreen: screenfull.isFullscreen
-        });
-      });
-    }
-
-    // Check speechSynthesis API availability
-    let isSpeechAPI = false;
-    if ('speechSynthesis' in window) {
-      isSpeechAPI = true;
-    }
 
     return (
       // Readability
