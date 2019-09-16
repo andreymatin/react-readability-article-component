@@ -9,7 +9,7 @@ export default class ArticleBox extends Component {
     return (
       <Article className="article entry-content">
         <header className="entry-header" itemScope itemType="http://schema.org/Article">
-          <h1 className="entry-title" itemProp="name">Header</h1>
+          <h1 className="entry-title" itemProp="name">Main Header</h1>
           <h3 className="entry-summary" itemProp="description">Summary subtitle</h3>
 
           <div className="entry-meta">

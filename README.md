@@ -1,10 +1,11 @@
 # React readability and article components
 
-React components Article and Readability
-with flex configuration and wide range of the web-typography features
+Readability Concepts based on React components Article and Readability
+with flex configuration and wide range of the web-typography features.
 
 ## Article Features
 
+- Responsive Header
 - Browsers: Firefox read view (@todo  SSR support)
 - Devices: iPhone Reader View support
 
@@ -191,3 +192,4 @@ Configuration Parameters for content, layout and browser
 - [ ] article: slider
 - [ ] article: asides
 - [ ] article: footer structure (comments, pager navigation)
+- [ ] iframe: inner CSS

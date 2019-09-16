@@ -9,7 +9,7 @@ import screenfull from 'screenfull';
 import { ReadabilityBox } from './styles';
 
 // Image
-import {ReactComponent as IconConfig} from './icon-config.svg';
+import { ReactComponent as IconConfig } from './icon-config.svg';
 
 // Service
 import FlatService from '../../services/flat-service';
@@ -168,10 +168,10 @@ export default class Readability extends Component {
    * Render component
    */
   render() {
-    const {error, isHidden, isFullScreen, isEnlargedText, isNightTheme, isSpeech, isSpeechAPI} = this.state;
+    const { error, isHidden, isFullScreen, isEnlargedText, isNightTheme, isSpeech, isSpeechAPI } = this.state;
 
     // Erorr
-    const errorMessage = error ? <ErrorHandler/> : null;
+    const errorMessage = error ? <ErrorHandler /> : null;
 
     // Status Buttons
     const statusHidden = isHidden ? '' : 'active'
@@ -204,9 +204,9 @@ export default class Readability extends Component {
             </li>
             <li>
               {isSpeechAPI ?
-              <button
-                className={`btn-config ${statusSpeech}`}
-                onClick={this.onSpeech}>Speech</button>
+                <button
+                  className={`btn-config ${statusSpeech}`}
+                  onClick={this.onSpeech}>Speech</button>
                 : null
               }
             </li>

@@ -1,5 +1,5 @@
 export default class FlatService {
-  async getArticle(url) {
+  getArticle = async (url) => {
     const res = await fetch(url);
 
     if (!res.ok) {
@@ -9,7 +9,7 @@ export default class FlatService {
     return await res.text();
   }
 
-  async getDumpSpeech() {
+  getDumpSpeech = async () => {
     const url = 'https://raw.githubusercontent.com/andreymatin/react-readability-article-component/master/content/2019-02-12-atricle-raw.txt';
     const res = await this.getArticle(url);
 

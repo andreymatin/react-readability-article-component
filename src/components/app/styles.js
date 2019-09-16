@@ -209,12 +209,13 @@ li {
   .config {
     position: relative;
     width: 100%;
+    margin-top: 25px;
   }
 
   .btn-config  {
     width: 100%;
     text-align: left;
   }
-
 }
+
 `;

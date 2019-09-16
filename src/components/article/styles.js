@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Article = styled.article`
+export const Article = styled.article `
 /**
  * Article
  */
@@ -39,6 +39,13 @@ export const Article = styled.article`
 .entry-meta p {
   padding: 0;
   margin: 0;
+}
+
+@media only screen and (max-width: 320px) {
+  .entry-title {
+    font-size: 15vw;
+    white-space: nowrap;
+  }
 }
 
 `;
